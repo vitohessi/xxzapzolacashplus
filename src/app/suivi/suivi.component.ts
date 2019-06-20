@@ -23,13 +23,13 @@ export class SuiviComponent implements OnInit {
   showEnd: boolean = false;
   showSuccess: boolean = false;
   actualStep: number = 1;
-	codePattern = /^[0-9]{12}$/;
+	codePattern = /^[0-9]{14}$/;
 	amountPattern = /^[0-9]{2,11}$/;
 
 
 
  ValidateCode(control: AbstractControl){
-   if(control.value !== '' && control.value < 99999999999){
+   if(control.value !== '' && control.value < 9999999999999){
      return { validCode: true };
    }
    return null;

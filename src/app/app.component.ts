@@ -7,7 +7,7 @@ import * as $ from 'jquery'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'Wafacash leader du transfert d\'argent au Maroc';
+  title = 'Vérification de transfert d\'argent au Maroc | Cashplus';
 
   constructor(){}
   

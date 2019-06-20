@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Signika:400,700&display=swap');
 body{
 	margin: 0;
 	padding: 0;
@@ -18,17 +18,29 @@ body{
 	display: block;
 	max-width: 100%;
 }
-.text-primary{
-	color: #f28d2d!important;
+.text-main{
+	color: #00959b!important;
+}
+.text-sec{
+	color: #ffd425;
 }
 .text-black{
 	color: #000!important;
 }
-.bg-primary{
-	background-color: #f28d2d!important;
+.bg-main{
+	background-color: #00959b!important;
+}
+.bg-sec{
+	background-color: #ffd425;
 }
 .bg-black{
 	background-color: #000!important;
+}
+.banner{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(./assets/images/banner.png);
+	background-position: center;
 }
 .header-top-line{
 	height: 4px;
@@ -50,84 +62,6 @@ body{
 .text-mini-in{
 	font-size: 14px;
 }
-.global-wrap{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.bloc-dsp-tk{
-	padding: 5px;
-	border-radius: 5px;
-	border: 1px solid #efefef;
-	width: 31%;
-	position: relative;
-	overflow: hidden;
-}
-.bloc-dsp-tk img{
-	display: block;
-	width: 100%;
-}
-.fading-line{
-	background-color: rgba(0, 0, 0, .5);
-	color: #fff;
-	padding: 20px;
-	position: absolute;
-	right: 5px;
-	bottom: 5px;
-	left: 5px;
-	text-align: center;
-	font-size: 22px;
-	z-index: 20000;
-}
-.main-hidden-part{
-	display: none;
-	margin: 30% 0;
-	font-style: italic;
-}
-.icon-maker-end{
-	line-height: 40px;
-	text-align: center;
-	width: 40px;
-	border-radius: 50%;
-	display: inline-block;
-	vertical-align: middle;
-}
-.img-set-zoom{
-	overflow: hidden;
-	margin-bottom: 20px;
-	max-height: 200px;
-}
-.bloc-made-zoom{
-	width: 24%;
-	display: inline-block;
-	font-weight: bold;
-}
-.img-zoom-maker{
-	width: 110%;
-	height: 110%;
-	left: -5%;
-	top: -5%;
-	position: relative;
-	text-align: center;
-}
-.img-zoom-maker img{
-	width: 90%;
-	display: inline-block;
-}
-.text-header-mini{
-	font-size: 15px;
-	font-weight: bold;
-}
-.img-phone-wrapper{
-	width: 280px;
-	margin-right: 40px;
-	bottom: -6px;
-	position: relative;
-}
-.img-phone-wrapper img{
-	display: block;
-	width: 100%;
-}
 .text-assoc-right{
 	width: calc(100% - 320px);
 	vertical-align: top;
@@ -147,6 +81,27 @@ body{
 .devise-block{
 	height: 100%;
 }
+.inner-text{
+	font-family: 'Signika', sans-serif!important;
+}
+.first-line{
+	font-size: 2.8em;
+	line-height: 38px;
+	font-family: 'Signika', sans-serif!important;
+}
+.sec-line{
+	font-size: 6em;
+	line-height: 1em;
+	font-family: 'Signika', sans-serif!important;
+}
+.third-line{
+	font-size: 2.5em;
+	font-family: 'Signika', sans-serif!important;
+}
+.last-line{
+	font-size: 2.5em;
+	font-family: 'Signika', sans-serif!important;
+}
 .fa-eye-slash, .fa-eye{
 	color: #a2a5a2;
 }
@@ -160,6 +115,12 @@ body{
 	outline: none;
 	border: 1px solid #dedfde;
 	line-height: 28px;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.input-shape:focus{
+	box-shadow: 0 0 5px #dedfde;
 }
 .hidden-replacer{
 	display: block;
@@ -198,6 +159,11 @@ body{
 	text-align:center;
 	padding: 50px 0;
 }
+.para-coord{
+	color: #757575;
+	font-size: 15px;
+	line-height: 27px;
+}
 .loading-cover:before{
 	content: "";
 	border: 4px solid #f28d2d;
@@ -220,6 +186,31 @@ body{
 	border-radius: 50%;
 	animation: spin .3s linear infinite;
 }
+
+.bloc-solo-v{
+	width: 32%;
+	margin-top: 80px;
+}
+.solo-last{
+	width: 23%;
+	font-size: 12px;
+	color: #656565;
+	line-height: 23px;
+}
+.solo-last img{
+	margin: 20px auto;
+	max-width: 80%;
+	display: block;
+}
+.bloc-solo-v h5{
+	color: #00959b;
+	font-size: 1.1em;
+}
+.bloc-solo-v p{
+	font-size: 11px;
+	line-height: 22px;
+	color: #656565;
+}
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -229,7 +220,21 @@ body{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+@media screen and (max-width: 976px){
+	.bloc-solo-v{
+		width: 48%;
+		margin-top: 80px;
+	}
+}
 @media screen and (max-width: 728px){
+	.solo-last{
+		width: 48%;
+		margin-bottom: 40px;
+	}
+	.bloc-solo-v{
+		width: 100%;
+		margin-top: 80px;
+	}
 	.text-assoc-right{
 		width: 100%;
 		padding: 20px;
